@@ -1,44 +1,82 @@
-# MGNREGS_PORTAL
+# HTML
 
-MGNREGA Website Clone
+A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
 
-A responsive web application clone of the Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA) official website, built using vanilla HTML, CSS, and JavaScript.
+## 🚀 Features
 
-📋 About MGNREGA
+- **HTML5** - Modern HTML structure with best practices
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- **Custom Components** - Pre-built component classes for buttons and containers
+- **NPM Scripts** - Easy-to-use commands for development and building
+- **Responsive Design** - Mobile-first approach for all screen sizes
 
-The Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA) is India's flagship social security scheme that guarantees 100 days of wage employment per year to rural households. This project recreates the user interface and functionality of the official MGNREGA portal.
+## 📋 Prerequisites
 
-✨ Features
+- Node.js (v12.x or higher)
+- npm or yarn
 
-Responsive Design: Fully responsive layout that works across desktop, tablet, and mobile devices
-Interactive UI: Dynamic user interface with smooth animations and transitions
-Multi-language Support: Interface available in multiple Indian languages
-Job Card Management: Digital job card generation and management system
-Work Allocation: Interactive work allocation and tracking system
-Payment Tracking: Real-time payment status and history tracking
-Grievance Portal: Complaint registration and tracking system
-Admin Dashboard: Administrative panel for monitoring and management
+## 🛠️ Installation
 
-🛠️ Technologies Used
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-HTML5: Semantic markup and structure
-CSS3: Custom styling and animations
-JavaScript (ES6+): Interactive functionality and DOM manipulation
-JSON: Data storage and management
-Tailwind CSS: Utility-first CSS framework for rapid styling
-Bootstrap: Responsive grid system and UI components
-Font Awesome: Professional icon library
-Google Fonts: Typography and font styling
+2. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-🚀 Getting Started
-Prerequisites
+## 📁 Project Structure
 
-A modern web browser (Chrome, Firefox, Safari, Edge)
-Internet connection (for CDN resources: Bootstrap, Tailwind CSS, Font Awesome, Google Fonts)
-Basic understanding of web technologies (optional, for modifications)
+```
+html_app/
+├── css/
+│   ├── tailwind.css   # Tailwind source file with custom utilities
+│   └── main.css       # Compiled CSS (generated)
+├── pages/             # HTML pages
+├── index.html         # Main entry point
+├── package.json       # Project dependencies and scripts
+└── tailwind.config.js # Tailwind CSS configuration
+```
 
-🔗 Live Demo
-View Live Demo
+## 🎨 Styling
+
+This project uses Tailwind CSS for styling. Custom utility classes include:
 
 
-⭐ Star this repository if you found it helpful!
+## 🧩 Customization
+
+To customize the Tailwind configuration, edit the `tailwind.config.js` file:
+
+
+## 📦 Build for Production
+
+Build the CSS for production:
+
+```bash
+npm run build:css
+# or
+yarn build:css
+```
+
+## 📱 Responsive Design
+
+The app is built with responsive design using Tailwind CSS breakpoints:
+
+- `sm`: 640px and up
+- `md`: 768px and up
+- `lg`: 1024px and up
+- `xl`: 1280px and up
+- `2xl`: 1536px and up
+
+## 🙏 Acknowledgments
+
+- Built with [Rocket.new](https://rocket.new)
+- Powered by HTML and Tailwind CSS
+
+Built with ❤️ on Rocket.new

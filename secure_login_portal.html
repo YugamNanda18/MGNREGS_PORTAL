@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Login Portal - MGNREGS सुरक्षित लॉगिन पोर्टल</title>
+    <meta name="description" content="Secure Aadhaar-based login for MGNREGS Work Demand Portal. Access your employment applications safely." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmgnregspo2159back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Header Section -->
+    <header class="bg-surface shadow-government border-b border-border-light">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <!-- Government Branding -->
+                <div class="flex items-center gap-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Government of India Emblem" class="h-12 w-12" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="text-left">
+                        <h1 class="text-primary font-noto-devanagari font-noto-bold text-lg md:text-xl">
+                            महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी योजना
+                        </h1>
+                        <p class="text-text-secondary font-inter text-sm">
+                            Mahatma Gandhi National Rural Employment Guarantee Scheme
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle -->
+                <div class="flex items-center gap-2 bg-primary-50 rounded p-1">
+                    <button id="hindiBtn" class="px-3 py-1 rounded bg-primary text-white font-noto-devanagari text-sm transition-all duration-300">
+                        हिंदी
+                    </button>
+                    <button id="englishBtn" class="px-3 py-1 rounded text-primary font-inter text-sm transition-all duration-300 hover:bg-primary-100">
+                        English
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-6">
+                    <a href="homepage_mgnregs_work_demand_portal.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        होम
+                    </a>
+                    <a href="work_demand_application_center.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        आवेदन करें
+                    </a>
+                    <a href="secure_login_portal.html" class="font-inter-medium text-secondary">
+                        लॉगिन
+                    </a>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="hidden md:inline">हेल्पलाइन:</span>
+                    <span class="font-inter-semibold">1800-345-2244</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Hero Section -->
+    <section class="py-8 bg-primary-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="font-noto-devanagari font-noto-bold text-2xl md:text-3xl text-primary mb-2">
+                    सुरक्षित लॉगिन पोर्टल
+                </h2>
+                <p class="font-inter text-lg text-text-secondary">
+                    Secure Login Portal - Access Your Employment Applications
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Login Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Login Form -->
+                    <div class="card p-8">
+                        <div class="text-center mb-6">
+                            <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-noto-devanagari font-noto-semibold text-xl text-primary mb-2">
+                                आधार आधारित लॉगिन
+                            </h3>
+                            <p class="font-inter text-sm text-text-secondary">
+                                Aadhaar-based Secure Authentication
+                            </p>
+                        </div>
+
+                        <!-- Login Form -->
+                        <form id="loginForm" class="space-y-6">
+                            <!-- Aadhaar Number -->
+                            <div>
+                                <label for="aadhaarNumber" class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    आधार संख्या / Aadhaar Number *
+                                </label>
+                                <input type="text" id="aadhaarNumber" name="aadhaarNumber" placeholder="1234-5678-9012" class="form-input" maxlength="14" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required />
+                                <p class="font-inter text-xs text-text-secondary mt-1">
+                                    12 अंकों की आधार संख्या दर्ज करें / Enter 12-digit Aadhaar number
+                                </p>
+                            </div>
+
+                            <!-- Mobile Number -->
+                            <div>
+                                <label for="mobileNumber" class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    मोबाइल नंबर / Mobile Number *
+                                </label>
+                                <div class="flex">
+                                    <span class="inline-flex items-center px-3 rounded-l border border-r-0 border-border bg-primary-50 text-text-secondary font-inter text-sm">
+                                        +91
+                                    </span>
+                                    <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="9876543210" class="form-input rounded-l-none" maxlength="10" pattern="[0-9]{10}" required />
+                                </div>
+                                <p class="font-inter text-xs text-text-secondary mt-1">
+                                    आधार से जुड़ा मोबाइल नंबर / Aadhaar-linked mobile number
+                                </p>
+                            </div>
+
+                            <!-- Send OTP Button -->
+                            <button type="button" id="sendOtpBtn" class="w-full bg-secondary hover:bg-secondary-600 text-white px-6 py-3 rounded font-inter-semibold transition-all duration-300">
+                                OTP भेजें / Send OTP
+                            </button>
+
+                            <!-- OTP Section (Initially Hidden) -->
+                            <div id="otpSection" class="hidden space-y-4">
+                                <div>
+                                    <label for="otpCode" class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                        OTP कोड / OTP Code *
+                                    </label>
+                                    <input type="text" id="otpCode" name="otpCode" placeholder="123456" class="form-input text-center text-2xl tracking-widest" maxlength="6" pattern="[0-9]{6}" />
+                                    <p class="font-inter text-xs text-text-secondary mt-1">
+                                        आपके मोबाइल पर भेजा गया 6 अंकों का कोड / 6-digit code sent to your mobile
+                                    </p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <span class="font-inter text-sm text-text-secondary">
+                                        OTP की अवधि: <span id="otpTimer" class="font-inter-semibold text-warning">02:00</span>
+                                    </span>
+                                    <button type="button" id="resendOtpBtn" class="font-inter text-sm text-primary hover:text-primary-700 transition-colors duration-300 disabled:opacity-50" disabled>
+                                        पुनः भेजें / Resend
+                                    </button>
+                                </div>
+
+                                <!-- Login Button -->
+                                <button type="submit" class="w-full btn-primary">
+                                    सुरक्षित लॉगिन / Secure Login
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Alternative Login -->
+                        <div class="mt-8 pt-6 border-t border-border-light">
+                            <p class="font-inter text-sm text-text-secondary text-center mb-4">
+                                आधार नहीं है? / Don't have Aadhaar?
+                            </p>
+                            <button type="button" id="alternativeLoginBtn" class="w-full bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded font-inter-semibold transition-all duration-300">
+                                BPL कार्ड से लॉगिन / Login with BPL Card
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Help & Security Information -->
+                    <div class="space-y-6">
+                        <!-- Security Badges -->
+                        <div class="card p-6">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                                सुरक्षा गारंटी
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-success-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-inter-semibold text-primary">SSL एन्क्रिप्शन</p>
+                                        <p class="font-inter text-sm text-text-secondary">256-bit सुरक्षा</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-primary-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Government Verified" class="w-6 h-6" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <div>
+                                        <p class="font-inter-semibold text-primary">सरकारी प्रमाणित</p>
+                                        <p class="font-inter text-sm text-text-secondary">Government Verified</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-accent-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-inter-semibold text-primary">डेटा सुरक्षा</p>
+                                        <p class="font-inter text-sm text-text-secondary">GDPR अनुपालन</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Login Instructions -->
+                        <div class="card p-6">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                                लॉगिन निर्देश
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <span class="bg-primary-100 text-primary w-6 h-6 rounded-full flex items-center justify-center text-sm font-inter-semibold mt-0.5">1</span>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        अपना 12 अंकों का आधार नंबर दर्ज करें
+                                    </p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="bg-primary-100 text-primary w-6 h-6 rounded-full flex items-center justify-center text-sm font-inter-semibold mt-0.5">2</span>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        आधार से जुड़ा मोबाइल नंबर दर्ज करें
+                                    </p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="bg-primary-100 text-primary w-6 h-6 rounded-full flex items-center justify-center text-sm font-inter-semibold mt-0.5">3</span>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        OTP भेजें बटन पर क्लिक करें
+                                    </p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="bg-primary-100 text-primary w-6 h-6 rounded-full flex items-center justify-center text-sm font-inter-semibold mt-0.5">4</span>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        SMS में आया 6 अंकों का OTP दर्ज करें
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Need Help Section -->
+                        <div class="card p-6 bg-accent-50 border-accent-200">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                                सहायता चाहिए?
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="font-inter-semibold text-primary">हेल्पलाइन</p>
+                                        <p class="font-inter text-sm text-text-secondary">1800-345-2244</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="font-inter-semibold text-primary">ईमेल सहायता</p>
+                                        <p class="font-inter text-sm text-text-secondary">help@mgnregs.gov.in</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <p class="font-inter-semibold text-primary">ग्राम पंचायत सहायता</p>
+                                        <p class="font-inter text-sm text-text-secondary">स्थानीय सहायक से संपर्क करें</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aadhaar Guide -->
+                        <div class="card p-6">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                                आधार कार्ड कहाँ मिलेगा?
+                            </h4>
+                            <div class="text-center mb-4">
+                                <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Aadhaar Card Sample" class="w-full max-w-xs mx-auto rounded border" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            </div>
+                            <div class="space-y-2 font-inter text-sm text-text-secondary">
+                                <p>• आधार कार्ड के बीच में 12 अंकों की संख्या</p>
+                                <p>• यह संख्या XXXX-XXXX-XXXX फॉर्मेट में होती है</p>
+                                <p>• कार्ड के सामने की तरफ नाम के नीचे लिखी होती है</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="py-8 bg-surface border-t border-border-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-8 text-center">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-inter text-sm text-text-secondary">SSL सुरक्षित</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-inter text-sm text-text-secondary">डेटा सुरक्षा</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Government Verified" class="w-6 h-6" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <span class="font-inter text-sm text-text-secondary">सरकारी प्रमाणित</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span class="font-inter text-sm text-text-secondary">24/7 सहायता</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        संपर्क जानकारी
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <p>हेल्पलाइन: 1800-345-2244</p>
+                        <p>ईमेल: help@mgnregs.gov.in</p>
+                        <p>समय: सुबह 9 बजे से शाम 6 बजे तक</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        महत्वपूर्ण लिंक
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <a href="work_demand_application_center.html" class="block hover:text-secondary transition-colors duration-300">
+                            आवेदन करें
+                        </a>
+                        <a href="secure_login_portal.html" class="block hover:text-secondary transition-colors duration-300">
+                            स्थिति जांचें
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            योजना की जानकारी
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        राज्य पोर्टल
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            उत्तर प्रदेश
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            राजस्थान
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            मध्य प्रदेश
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        सामाजिक मीडिया
+                    </h4>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)" class="hover:text-secondary transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="hover:text-secondary transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-primary-800 mt-8 pt-6 text-center">
+                <p class="font-inter text-sm opacity-80">
+                    © 2025 भारत सरकार। सभी अधिकार सुरक्षित। | Government of India. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        const hindiBtn = document.getElementById('hindiBtn');
+        const englishBtn = document.getElementById('englishBtn');
+
+        hindiBtn.addEventListener('click', function() {
+            hindiBtn.classList.add('bg-primary', 'text-white');
+            hindiBtn.classList.remove('text-primary');
+            englishBtn.classList.remove('bg-primary', 'text-white');
+            englishBtn.classList.add('text-primary');
+        });
+
+        englishBtn.addEventListener('click', function() {
+            englishBtn.classList.add('bg-primary', 'text-white');
+            englishBtn.classList.remove('text-primary');
+            hindiBtn.classList.remove('bg-primary', 'text-white');
+            hindiBtn.classList.add('text-primary');
+        });
+
+        // Aadhaar Number Formatting
+        const aadhaarInput = document.getElementById('aadhaarNumber');
+        aadhaarInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 12) value = value.slice(0, 12);
+            
+            // Format as XXXX-XXXX-XXXX
+            if (value.length > 8) {
+                value = value.slice(0, 4) + '-' + value.slice(4, 8) + '-' + value.slice(8);
+            } else if (value.length > 4) {
+                value = value.slice(0, 4) + '-' + value.slice(4);
+            }
+            
+            e.target.value = value;
+        });
+
+        // Mobile Number Validation
+        const mobileInput = document.getElementById('mobileNumber');
+        mobileInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            e.target.value = value;
+        });
+
+        // Send OTP Functionality
+        const sendOtpBtn = document.getElementById('sendOtpBtn');
+        const otpSection = document.getElementById('otpSection');
+        const otpTimer = document.getElementById('otpTimer');
+        const resendOtpBtn = document.getElementById('resendOtpBtn');
+
+        sendOtpBtn.addEventListener('click', function() {
+            const aadhaar = aadhaarInput.value.replace(/-/g, '');
+            const mobile = mobileInput.value;
+
+            // Basic validation
+            if (aadhaar.length !== 12) {
+                alert('कृपया वैध 12 अंकों का आधार नंबर दर्ज करें।');
+                return;
+            }
+
+            if (mobile.length !== 10) {
+                alert('कृपया वैध 10 अंकों का मोबाइल नंबर दर्ज करें।');
+                return;
+            }
+
+            // Simulate OTP sending
+            sendOtpBtn.disabled = true;
+            sendOtpBtn.textContent = 'OTP भेजा जा रहा है...';
+            
+            setTimeout(() => {
+                otpSection.classList.remove('hidden');
+                sendOtpBtn.textContent = 'OTP भेज दिया गया';
+                sendOtpBtn.classList.add('bg-success', 'hover:bg-success-700');
+                sendOtpBtn.classList.remove('bg-secondary', 'hover:bg-secondary-600');
+                
+                // Start OTP timer
+                startOtpTimer();
+                
+                // Show success message
+                alert('OTP आपके मोबाइल नंबर ' + mobile + ' पर भेज दिया गया है। डेमो के लिए OTP: 123456');
+            }, 2000);
+        });
+
+        // OTP Timer
+        function startOtpTimer() {
+            let timeLeft = 120; // 2 minutes
+            resendOtpBtn.disabled = true;
+            
+            const timer = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                otpTimer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    resendOtpBtn.disabled = false;
+                    otpTimer.textContent = '00:00';
+                    otpTimer.classList.add('text-error');
+                }
+                
+                timeLeft--;
+            }, 1000);
+        }
+
+        // OTP Input Formatting
+        const otpInput = document.getElementById('otpCode');
+        otpInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 6) value = value.slice(0, 6);
+            e.target.value = value;
+        });
+
+        // Resend OTP
+        resendOtpBtn.addEventListener('click', function() {
+            resendOtpBtn.disabled = true;
+            resendOtpBtn.textContent = 'भेजा जा रहा है...';
+            
+            setTimeout(() => {
+                resendOtpBtn.textContent = 'पुनः भेजें / Resend';
+                startOtpTimer();
+                alert('OTP पुनः भेज दिया गया है। डेमो के लिए OTP: 123456');
+            }, 2000);
+        });
+
+        // Form Submission
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const aadhaar = aadhaarInput.value.replace(/-/g, '');
+            const mobile = mobileInput.value;
+            const otp = otpInput.value;
+
+            // Validation
+            if (aadhaar.length !== 12) {
+                alert('कृपया वैध आधार नंबर दर्ज करें।');
+                return;
+            }
+
+            if (mobile.length !== 10) {
+                alert('कृपया वैध मोबाइल नंबर दर्ज करें।');
+                return;
+            }
+
+            if (otp.length !== 6) {
+                alert('कृपया 6 अंकों का OTP दर्ज करें।');
+                return;
+            }
+
+            // Demo validation - accept specific credentials
+            if (aadhaar === '123456789012' && mobile === '9876543210' && otp === '123456') {
+                // Show success message
+                alert('सफलतापूर्वक लॉगिन हो गए! आपको डैशबोर्ड पर भेजा जा रहा है।');
+                
+                // Simulate redirect to dashboard
+                setTimeout(() => {
+                    window.location.href = 'work_demand_application_center.html';
+                }, 1500);
+            } else {
+                alert('गलत जानकारी। कृपया सही आधार नंबर, मोबाइल नंबर और OTP दर्ज करें।\n\nडेमो के लिए:\nआधार: 1234-5678-9012\nमोबाइल: 9876543210\nOTP: 123456');
+            }
+        });
+
+        // Alternative Login
+        const alternativeLoginBtn = document.getElementById('alternativeLoginBtn');
+        alternativeLoginBtn.addEventListener('click', function() {
+            alert('BPL कार्ड लॉगिन सुविधा जल्द ही उपलब्ध होगी। कृपया आधार आधारित लॉगिन का उपयोग करें।');
+        });
+
+        // Auto-focus next input after OTP digit entry
+        otpInput.addEventListener('keyup', function(e) {
+            if (e.target.value.length === 6) {
+                // Auto-submit when 6 digits are entered
+                setTimeout(() => {
+                    if (e.target.value === '123456') {
+                        loginForm.dispatchEvent(new Event('submit'));
+                    }
+                }, 500);
+            }
+        });
+
+        // Accessibility: High contrast toggle
+        document.addEventListener('keydown', function(e) {
+            if (e.altKey && e.key === 'h') {
+                document.body.classList.toggle('high-contrast');
+            }
+        });
+    </script>
+</body>
+</html>

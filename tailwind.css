@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1f4e79; /* blue-900 - Government authority and trust foundation */
+  --color-primary-50: #eff6ff; /* blue-50 */
+  --color-primary-100: #dbeafe; /* blue-100 */
+  --color-primary-200: #bfdbfe; /* blue-200 */
+  --color-primary-300: #93c5fd; /* blue-300 */
+  --color-primary-400: #60a5fa; /* blue-400 */
+  --color-primary-500: #3b82f6; /* blue-500 */
+  --color-primary-600: #2563eb; /* blue-600 */
+  --color-primary-700: #1d4ed8; /* blue-700 */
+  --color-primary-800: #1e40af; /* blue-800 */
+  --color-primary-900: #1f4e79; /* blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #ff9933; /* orange-400 - National pride and important highlights */
+  --color-secondary-50: #fff7ed; /* orange-50 */
+  --color-secondary-100: #ffedd5; /* orange-100 */
+  --color-secondary-200: #fed7aa; /* orange-200 */
+  --color-secondary-300: #fdba74; /* orange-300 */
+  --color-secondary-400: #ff9933; /* orange-400 */
+  --color-secondary-500: #f97316; /* orange-500 */
+  --color-secondary-600: #ea580c; /* orange-600 */
+  --color-secondary-700: #c2410c; /* orange-700 */
+  --color-secondary-800: #9a3412; /* orange-800 */
+  --color-secondary-900: #7c2d12; /* orange-900 */
+
+  /* Accent Colors */
+  --color-accent: #228b22; /* green-600 - Rural prosperity and positive progress */
+  --color-accent-50: #f0fdf4; /* green-50 */
+  --color-accent-100: #dcfce7; /* green-100 */
+  --color-accent-200: #bbf7d0; /* green-200 */
+  --color-accent-300: #86efac; /* green-300 */
+  --color-accent-400: #4ade80; /* green-400 */
+  --color-accent-500: #22c55e; /* green-500 */
+  --color-accent-600: #228b22; /* green-600 */
+  --color-accent-700: #15803d; /* green-700 */
+  --color-accent-800: #166534; /* green-800 */
+  --color-accent-900: #14532d; /* green-900 */
+
+  /* Background Colors */
+  --color-background: #f8f9fa; /* gray-50 - Clean canvas for focused reading */
+  --color-surface: #ffffff; /* white - Card elevation and content separation */
+
+  /* Text Colors */
+  --color-text-primary: #212529; /* gray-900 - Maximum readability for extended forms */
+  --color-text-secondary: #6c757d; /* gray-500 - Helpful guidance and secondary information */
+
+  /* Status Colors */
+  --color-success: #28a745; /* green-600 - Application progress and positive confirmations */
+  --color-warning: #ffc107; /* yellow-400 - Important notices without creating alarm */
+  --color-error: #dc3545; /* red-600 - Clear problem identification with helpful tone */
+
+  /* Status Color Variants */
+  --color-success-50: #f0fdf4; /* green-50 */
+  --color-success-100: #dcfce7; /* green-100 */
+  --color-success-600: #28a745; /* green-600 */
+
+  --color-warning-50: #fffbeb; /* yellow-50 */
+  --color-warning-100: #fef3c7; /* yellow-100 */
+  --color-warning-400: #ffc107; /* yellow-400 */
+
+  --color-error-50: #fef2f2; /* red-50 */
+  --color-error-100: #fee2e2; /* red-100 */
+  --color-error-600: #dc3545; /* red-600 */
+
+  /* Border Colors */
+  --color-border: #e5e7eb; /* gray-200 */
+  --color-border-light: #f3f4f6; /* gray-100 */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded font-inter-semibold transition-all duration-300 ease-in-out hover:bg-primary-700 focus:ring-2 focus:ring-primary-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded font-inter-semibold transition-all duration-300 ease-in-out hover:bg-secondary-600 focus:ring-2 focus:ring-secondary-200;
+  }
+
+  .card {
+    @apply bg-surface rounded border border-border-light shadow-sm;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-border rounded focus:ring-2 focus:ring-primary-200 focus:border-primary transition-all duration-300 ease-in-out;
+  }
+
+  .text-government {
+    @apply text-primary font-noto-devanagari;
+  }
+
+  .shadow-government {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

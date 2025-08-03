@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MGNREGS Work Demand Portal - महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी योजना</title>
+    <meta name="description" content="Apply for guaranteed rural employment under MGNREGS. Your work, your right - आपका काम, आपका अधिकार" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmgnregspo2159back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Header Section -->
+    <header class="bg-surface shadow-government border-b border-border-light">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <!-- Government Branding -->
+                <div class="flex items-center gap-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Government of India Emblem" class="h-12 w-12" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="text-left">
+                        <h1 class="text-primary font-noto-devanagari font-noto-bold text-lg md:text-xl">
+                            महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी योजना
+                        </h1>
+                        <p class="text-text-secondary font-inter text-sm">
+                            Mahatma Gandhi National Rural Employment Guarantee Scheme
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle -->
+                <div class="flex items-center gap-2 bg-primary-50 rounded p-1">
+                    <button id="hindiBtn" class="px-3 py-1 rounded bg-primary text-white font-noto-devanagari text-sm transition-all duration-300">
+                        हिंदी
+                    </button>
+                    <button id="englishBtn" class="px-3 py-1 rounded text-primary font-inter text-sm transition-all duration-300 hover:bg-primary-100">
+                        English
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-6">
+                    <a href="homepage_mgnregs_work_demand_portal.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        होम
+                    </a>
+                    <a href="work_demand_application_center.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        आवेदन करें
+                    </a>
+                    <a href="secure_login_portal.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        लॉगिन
+                    </a>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="hidden md:inline">हेल्पलाइन:</span>
+                    <span class="font-inter-semibold">1800-345-2244</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-primary-800 text-white py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="font-noto-devanagari font-noto-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+                        आपका काम, आपका अधिकार
+                    </h2>
+                    <p class="font-inter text-lg md:text-xl mb-2 opacity-90">
+                        Your Work, Your Right
+                    </p>
+                    <p class="font-inter text-base md:text-lg mb-8 opacity-80 leading-relaxed">
+                        गारंटीशुदा रोजगार के लिए आवेदन करें। प्रति वर्ष 100 दिन का काम सुनिश्चित।
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="work_demand_application_center.html" class="bg-secondary hover:bg-secondary-600 text-white px-8 py-4 rounded font-inter-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            काम के लिए आवेदन करें
+                        </a>
+                        <a href="secure_login_portal.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-4 rounded font-inter-semibold text-lg transition-all duration-300">
+                            स्थिति जांचें
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="https://images.pexels.com/photos/5691660/pexels-photo-5691660.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rural workers engaged in MGNREGS work" class="rounded-lg shadow-xl w-full max-w-md mx-auto" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Cards -->
+    <section class="py-12 bg-surface">
+        <div class="container mx-auto px-4">
+            <h3 class="font-noto-devanagari font-noto-semibold text-2xl md:text-3xl text-center text-primary mb-8">
+                त्वरित पहुंच
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- New Applicant Card -->
+                <div class="card p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-xl mb-3 text-primary">
+                        नया आवेदक
+                    </h4>
+                    <p class="font-inter text-text-secondary mb-4">
+                        पहली बार आवेदन कर रहे हैं? यहाँ से शुरू करें
+                    </p>
+                    <a href="work_demand_application_center.html" class="btn-primary inline-block">
+                        आवेदन शुरू करें
+                    </a>
+                </div>
+
+                <!-- Check Status Card -->
+                <div class="card p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="bg-warning-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-warning-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-xl mb-3 text-primary">
+                        स्थिति जांचें
+                    </h4>
+                    <p class="font-inter text-text-secondary mb-4">
+                        अपने आवेदन की वर्तमान स्थिति देखें
+                    </p>
+                    <a href="secure_login_portal.html" class="btn-secondary inline-block">
+                        स्थिति देखें
+                    </a>
+                </div>
+
+                <!-- Download Receipt Card -->
+                <div class="card p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="bg-success-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-xl mb-3 text-primary">
+                        रसीद डाउनलोड करें
+                    </h4>
+                    <p class="font-inter text-text-secondary mb-4">
+                        अपनी कार्य रसीद और प्रमाण पत्र डाउनलोड करें
+                    </p>
+                    <a href="secure_login_portal.html" class="bg-success hover:bg-success-700 text-white px-6 py-3 rounded font-inter-semibold transition-all duration-300 inline-block">
+                        डाउनलोड करें
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-time Impact Counters -->
+    <section class="py-12 bg-primary-50">
+        <div class="container mx-auto px-4">
+            <h3 class="font-noto-devanagari font-noto-semibold text-2xl md:text-3xl text-center text-primary mb-8">
+                योजना का प्रभाव
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-surface rounded-lg p-6 shadow-government">
+                        <div class="text-4xl md:text-5xl font-inter-semibold text-accent mb-2" id="jobsCounter">
+                            2,45,678
+                        </div>
+                        <p class="font-noto-devanagari font-noto-medium text-lg text-primary">
+                            इस महीने आवंटित कार्य
+                        </p>
+                        <p class="font-inter text-sm text-text-secondary mt-1">
+                            Jobs Allocated This Month
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-surface rounded-lg p-6 shadow-government">
+                        <div class="text-4xl md:text-5xl font-inter-semibold text-secondary mb-2" id="familiesCounter">
+                            1,89,432
+                        </div>
+                        <p class="font-noto-devanagari font-noto-medium text-lg text-primary">
+                            लाभान्वित परिवार
+                        </p>
+                        <p class="font-inter text-sm text-text-secondary mt-1">
+                            Families Benefited
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-surface rounded-lg p-6 shadow-government">
+                        <div class="text-4xl md:text-5xl font-inter-semibold text-primary mb-2" id="paymentsCounter">
+                            ₹45.6 करोड़
+                        </div>
+                        <p class="font-noto-devanagari font-noto-medium text-lg text-primary">
+                            कुल भुगतान
+                        </p>
+                        <p class="font-inter text-sm text-text-secondary mt-1">
+                            Total Payments Processed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Flow -->
+    <section class="py-12 bg-surface">
+        <div class="container mx-auto px-4">
+            <h3 class="font-noto-devanagari font-noto-semibold text-2xl md:text-3xl text-center text-primary mb-8">
+                आसान प्रक्रिया
+            </h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-inter-semibold text-primary">1</span>
+                    </div>
+                    <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-2 text-primary">
+                        पंजीकरण
+                    </h4>
+                    <p class="font-inter text-sm text-text-secondary">
+                        आधार से पंजीकरण करें
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-inter-semibold text-primary">2</span>
+                    </div>
+                    <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 00-1 1v6a1 1 0 001 1v1a2 2 0 01-2-2V5zM14 5a2 2 0 00-2-2v1a1 1 0 011 1v6a1 1 0 01-1 1v1a2 2 0 002-2V5z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-2 text-primary">
+                        आवेदन
+                    </h4>
+                    <p class="font-inter text-sm text-text-secondary">
+                        काम के लिए आवेदन करें
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-inter-semibold text-primary">3</span>
+                    </div>
+                    <div class="bg-warning-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-warning-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-2 text-primary">
+                        काम मिले
+                    </h4>
+                    <p class="font-inter text-sm text-text-secondary">
+                        कार्य आवंटन प्राप्त करें
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-inter-semibold text-primary">4</span>
+                    </div>
+                    <div class="bg-success-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-2 text-primary">
+                        कमाएं
+                    </h4>
+                    <p class="font-inter text-sm text-text-secondary">
+                        मजदूरी प्राप्त करें
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Carousel -->
+    <section class="py-12 bg-accent-50">
+        <div class="container mx-auto px-4">
+            <h3 class="font-noto-devanagari font-noto-semibold text-2xl md:text-3xl text-center text-primary mb-8">
+                सफलता की कहानियां
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Story 1 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sunita Devi - MGNREGS Beneficiary" class="w-16 h-16 rounded-full object-cover mr-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary">
+                                सुनीता देवी
+                            </h4>
+                            <p class="font-inter text-sm text-text-secondary">
+                                राजस्थान, जयपुर
+                            </p>
+                        </div>
+                    </div>
+                    <p class="font-inter text-text-secondary mb-4">
+                        "MGNREGS से मुझे 100 दिन का काम मिला। अब मैं अपने बच्चों की पढ़ाई का खर्च उठा सकती हूं।"
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-inter-semibold text-accent">
+                            कमाई: ₹18,500
+                        </span>
+                        <span class="font-inter text-sm text-text-secondary">
+                            95 दिन काम
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pixabay.com/photo/2016/11/21/14/53/man-1845814_150.jpg" alt="Ramesh Kumar - MGNREGS Beneficiary" class="w-16 h-16 rounded-full object-cover mr-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary">
+                                रमेश कुमार
+                            </h4>
+                            <p class="font-inter text-sm text-text-secondary">
+                                उत्तर प्रदेश, वाराणसी
+                            </p>
+                        </div>
+                    </div>
+                    <p class="font-inter text-text-secondary mb-4">
+                        "सड़क निर्माण का काम मिला। पूरे परिवार को फायदा हुआ। अब घर की स्थिति बेहतर है।"
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-inter-semibold text-accent">
+                            कमाई: ₹22,300
+                        </span>
+                        <span class="font-inter text-sm text-text-secondary">
+                            100 दिन काम
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=150&q=80" alt="Meera Sharma - MGNREGS Beneficiary" class="w-16 h-16 rounded-full object-cover mr-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary">
+                                मीरा शर्मा
+                            </h4>
+                            <p class="font-inter text-sm text-text-secondary">
+                                मध्य प्रदेश, भोपाल
+                            </p>
+                        </div>
+                    </div>
+                    <p class="font-inter text-text-secondary mb-4">
+                        "तालाब की सफाई का काम मिला। समय पर पेमेंट मिली। बहुत खुश हूं इस योजना से।"
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-inter-semibold text-accent">
+                            कमाई: ₹19,800
+                        </span>
+                        <span class="font-inter text-sm text-text-secondary">
+                            88 दिन काम
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMS Notification Signup -->
+    <section class="py-12 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="font-noto-devanagari font-noto-semibold text-2xl md:text-3xl mb-4">
+                SMS अपडेट के लिए साइन अप करें
+            </h3>
+            <p class="font-inter text-lg mb-6 opacity-90">
+                अपने आवेदन की स्थिति SMS पर पाएं
+            </p>
+            <div class="max-w-md mx-auto flex gap-2">
+                <input type="tel" placeholder="मोबाइल नंबर दर्ज करें" class="flex-1 px-4 py-3 rounded text-primary font-inter" pattern="[0-9]{10}" />
+                <button class="bg-secondary hover:bg-secondary-600 px-6 py-3 rounded font-inter-semibold transition-all duration-300">
+                    साइन अप
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="py-8 bg-surface border-t border-border-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-8 text-center">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-inter text-sm text-text-secondary">SSL सुरक्षित</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-inter text-sm text-text-secondary">डेटा सुरक्षा</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Government Verified" class="w-6 h-6" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <span class="font-inter text-sm text-text-secondary">सरकारी प्रमाणित</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span class="font-inter text-sm text-text-secondary">24/7 सहायता</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        संपर्क जानकारी
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <p>हेल्पलाइन: 1800-345-2244</p>
+                        <p>ईमेल: help@mgnregs.gov.in</p>
+                        <p>समय: सुबह 9 बजे से शाम 6 बजे तक</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        महत्वपूर्ण लिंक
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <a href="work_demand_application_center.html" class="block hover:text-secondary transition-colors duration-300">
+                            आवेदन करें
+                        </a>
+                        <a href="secure_login_portal.html" class="block hover:text-secondary transition-colors duration-300">
+                            स्थिति जांचें
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            योजना की जानकारी
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        राज्य पोर्टल
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            उत्तर प्रदेश
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            राजस्थान
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            मध्य प्रदेश
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        सामाजिक मीडिया
+                    </h4>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)" class="hover:text-secondary transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="hover:text-secondary transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-primary-800 mt-8 pt-6 text-center">
+                <p class="font-inter text-sm opacity-80">
+                    © 2025 भारत सरकार। सभी अधिकार सुरक्षित। | Government of India. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        const hindiBtn = document.getElementById('hindiBtn');
+        const englishBtn = document.getElementById('englishBtn');
+
+        hindiBtn.addEventListener('click', function() {
+            hindiBtn.classList.add('bg-primary', 'text-white');
+            hindiBtn.classList.remove('text-primary');
+            englishBtn.classList.remove('bg-primary', 'text-white');
+            englishBtn.classList.add('text-primary');
+        });
+
+        englishBtn.addEventListener('click', function() {
+            englishBtn.classList.add('bg-primary', 'text-white');
+            englishBtn.classList.remove('text-primary');
+            hindiBtn.classList.remove('bg-primary', 'text-white');
+            hindiBtn.classList.add('text-primary');
+        });
+
+        // Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (element.id === 'paymentsCounter') {
+                    element.textContent = '₹' + (current / 10000000).toFixed(1) + ' करोड़';
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString('hi-IN');
+                }
+            }, 16);
+        }
+
+        // Initialize counters when page loads
+        window.addEventListener('load', function() {
+            animateCounter(document.getElementById('jobsCounter'), 245678);
+            animateCounter(document.getElementById('familiesCounter'), 189432);
+            animateCounter(document.getElementById('paymentsCounter'), 456000000);
+        });
+
+        // SMS Signup functionality
+        document.querySelector('button').addEventListener('click', function() {
+            const phoneInput = document.querySelector('input[type="tel"]');
+            const phone = phoneInput.value.trim();
+            
+            if (phone.length === 10 && /^[0-9]+$/.test(phone)) {
+                alert('SMS अपडेट के लिए सफलतापूर्वक साइन अप हो गए! आपको जल्द ही अपडेट मिलेंगे।');
+                phoneInput.value = '';
+            } else {
+                alert('कृपया वैध 10 अंकों का मोबाइल नंबर दर्ज करें।');
+            }
+        });
+    </script>
+</body>
+</html>

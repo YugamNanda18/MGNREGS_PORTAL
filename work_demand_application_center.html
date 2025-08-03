@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Demand Application Center - कार्य मांग आवेदन केंद्र | MGNREGS Portal</title>
+    <meta name="description" content="Apply for guaranteed rural employment under MGNREGS. Complete your work demand application in simple steps." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmgnregspo2159back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Header Section -->
+    <header class="bg-surface shadow-government border-b border-border-light">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <!-- Government Branding -->
+                <div class="flex items-center gap-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Government of India Emblem" class="h-12 w-12" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="text-left">
+                        <h1 class="text-primary font-noto-devanagari font-noto-bold text-lg md:text-xl">
+                            महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी योजना
+                        </h1>
+                        <p class="text-text-secondary font-inter text-sm">
+                            Mahatma Gandhi National Rural Employment Guarantee Scheme
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle -->
+                <div class="flex items-center gap-2 bg-primary-50 rounded p-1">
+                    <button id="hindiBtn" class="px-3 py-1 rounded bg-primary text-white font-noto-devanagari text-sm transition-all duration-300">
+                        हिंदी
+                    </button>
+                    <button id="englishBtn" class="px-3 py-1 rounded text-primary font-inter text-sm transition-all duration-300 hover:bg-primary-100">
+                        English
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-6">
+                    <a href="homepage_mgnregs_work_demand_portal.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        होम
+                    </a>
+                    <a href="work_demand_application_center.html" class="font-inter-medium text-secondary">
+                        आवेदन करें
+                    </a>
+                    <a href="secure_login_portal.html" class="font-inter-medium text-white hover:text-secondary transition-colors duration-300">
+                        लॉगिन
+                    </a>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="hidden md:inline">हेल्पलाइन:</span>
+                    <span class="font-inter-semibold">1800-345-2244</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Header -->
+    <section class="bg-primary-50 py-6">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6">
+                <h2 class="font-noto-devanagari font-noto-bold text-2xl md:text-3xl text-primary mb-2">
+                    कार्य मांग आवेदन फॉर्म
+                </h2>
+                <p class="font-inter text-text-secondary">
+                    Work Demand Application Form - Complete in 5 simple steps
+                </p>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex-1 text-center">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-2 font-inter-semibold" id="step1-indicator">
+                            1
+                        </div>
+                        <span class="font-noto-devanagari text-sm text-primary font-noto-semibold">व्यक्तिगत विवरण</span>
+                    </div>
+                    <div class="flex-1 h-1 bg-border mx-2">
+                        <div class="h-full bg-primary transition-all duration-300" id="progress1" style="width: 0%"></div>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="w-10 h-10 bg-border text-text-secondary rounded-full flex items-center justify-center mx-auto mb-2 font-inter-semibold" id="step2-indicator">
+                            2
+                        </div>
+                        <span class="font-noto-devanagari text-sm text-text-secondary">पारिवारिक जानकारी</span>
+                    </div>
+                    <div class="flex-1 h-1 bg-border mx-2">
+                        <div class="h-full bg-primary transition-all duration-300" id="progress2" style="width: 0%"></div>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="w-10 h-10 bg-border text-text-secondary rounded-full flex items-center justify-center mx-auto mb-2 font-inter-semibold" id="step3-indicator">
+                            3
+                        </div>
+                        <span class="font-noto-devanagari text-sm text-text-secondary">कार्य प्राथमिकता</span>
+                    </div>
+                    <div class="flex-1 h-1 bg-border mx-2">
+                        <div class="h-full bg-primary transition-all duration-300" id="progress3" style="width: 0%"></div>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="w-10 h-10 bg-border text-text-secondary rounded-full flex items-center justify-center mx-auto mb-2 font-inter-semibold" id="step4-indicator">
+                            4
+                        </div>
+                        <span class="font-noto-devanagari text-sm text-text-secondary">दस्तावेज़</span>
+                    </div>
+                    <div class="flex-1 h-1 bg-border mx-2">
+                        <div class="h-full bg-primary transition-all duration-300" id="progress4" style="width: 0%"></div>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="w-10 h-10 bg-border text-text-secondary rounded-full flex items-center justify-center mx-auto mb-2 font-inter-semibold" id="step5-indicator">
+                            5
+                        </div>
+                        <span class="font-noto-devanagari text-sm text-text-secondary">समीक्षा</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auto-save Indicator -->
+    <div class="fixed top-20 right-4 z-50">
+        <div id="autoSaveIndicator" class="bg-success text-white px-4 py-2 rounded shadow-lg opacity-0 transition-all duration-300 transform translate-x-full">
+            <div class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-inter text-sm">स्वतः सहेजा गया</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Form -->
+    <main class="py-8">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <form id="workDemandForm" class="space-y-8">
+                
+                <!-- Step 1: Personal Details -->
+                <section id="step1" class="card p-6">
+                    <h3 class="font-noto-devanagari font-noto-semibold text-xl text-primary mb-6 flex items-center gap-2">
+                        <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
+                        व्यक्तिगत विवरण (Personal Details)
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Aadhaar Number -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                आधार संख्या (Aadhaar Number) <span class="text-error">*</span>
+                            </label>
+                            <input type="text" id="aadhaarNumber" name="aadhaarNumber" placeholder="1234 5678 9012" class="form-input" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}" maxlength="14" required />
+                            <p class="text-text-secondary text-sm mt-1 font-inter">
+                                आधार से जानकारी अपने आप भर जाएगी
+                            </p>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                मोबाइल नंबर (Mobile Number) <span class="text-error">*</span>
+                            </label>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="9876543210" class="form-input" pattern="[0-9]{10}" maxlength="10" required />
+                        </div>
+
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                पूरा नाम (Full Name) <span class="text-error">*</span>
+                            </label>
+                            <input type="text" id="fullName" name="fullName" placeholder="राम कुमार शर्मा" class="form-input" required />
+                        </div>
+
+                        <!-- Father's Name -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                पिता का नाम (Father's Name) <span class="text-error">*</span>
+                            </label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="श्याम लाल शर्मा" class="form-input" required />
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                जन्म तिथि (Date of Birth) <span class="text-error">*</span>
+                            </label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" max="2006-07-29" required />
+                        </div>
+
+                        <!-- Gender -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                लिंग (Gender) <span class="text-error">*</span>
+                            </label>
+                            <select id="gender" name="gender" class="form-input" required>
+                                <option value>चुनें</option>
+                                <option value="male">पुरुष (Male)</option>
+                                <option value="female">महिला (Female)</option>
+                                <option value="other">अन्य (Other)</option>
+                            </select>
+                        </div>
+
+                        <!-- State -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                राज्य (State) <span class="text-error">*</span>
+                            </label>
+                            <select id="state" name="state" class="form-input" required>
+                                <option value>राज्य चुनें</option>
+                                <option value="uttar-pradesh">उत्तर प्रदेश (Uttar Pradesh)</option>
+                                <option value="rajasthan">राजस्थान (Rajasthan)</option>
+                                <option value="madhya-pradesh">मध्य प्रदेश (Madhya Pradesh)</option>
+                                <option value="bihar">बिहार (Bihar)</option>
+                                <option value="west-bengal">पश्चिम बंगाल (West Bengal)</option>
+                                <option value="odisha">ओडिशा (Odisha)</option>
+                                <option value="jharkhand">झारखंड (Jharkhand)</option>
+                                <option value="chhattisgarh">छत्तीसगढ़ (Chhattisgarh)</option>
+                            </select>
+                        </div>
+
+                        <!-- District -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                जिला (District) <span class="text-error">*</span>
+                            </label>
+                            <select id="district" name="district" class="form-input" required disabled>
+                                <option value>पहले राज्य चुनें</option>
+                            </select>
+                        </div>
+
+                        <!-- Block -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                ब्लॉक (Block) <span class="text-error">*</span>
+                            </label>
+                            <select id="block" name="block" class="form-input" required disabled>
+                                <option value>पहले जिला चुनें</option>
+                            </select>
+                        </div>
+
+                        <!-- Village -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                गांव (Village) <span class="text-error">*</span>
+                            </label>
+                            <input type="text" id="village" name="village" placeholder="गांव का नाम" class="form-input" required />
+                        </div>
+
+                        <!-- Pin Code -->
+                        <div>
+                            <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                पिन कोड (Pin Code) <span class="text-error">*</span>
+                            </label>
+                            <input type="text" id="pinCode" name="pinCode" placeholder="123456" class="form-input" pattern="[0-9]{6}" maxlength="6" required />
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end mt-6">
+                        <button type="button" id="step1Next" class="btn-primary flex items-center gap-2">
+                            आगे बढ़ें
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 2: Family Information -->
+                <section id="step2" class="card p-6 hidden">
+                    <h3 class="font-noto-devanagari font-noto-semibold text-xl text-primary mb-6 flex items-center gap-2">
+                        <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
+                        पारिवारिक जानकारी (Family Information)
+                    </h3>
+
+                    <!-- BPL Card Details -->
+                    <div class="bg-accent-50 p-4 rounded mb-6">
+                        <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                            BPL कार्ड विवरण (BPL Card Details)
+                        </h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    BPL कार्ड संख्या <span class="text-error">*</span>
+                                </label>
+                                <input type="text" id="bplCardNumber" name="bplCardNumber" placeholder="BPL/2024/123456" class="form-input" required />
+                            </div>
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    परिवार के मुखिया का नाम <span class="text-error">*</span>
+                                </label>
+                                <input type="text" id="headOfFamily" name="headOfFamily" placeholder="परिवार के मुखिया का नाम" class="form-input" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Family Members -->
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary">
+                                परिवारिक सदस्य (Family Members)
+                            </h4>
+                            <button type="button" id="addFamilyMember" class="bg-accent hover:bg-accent-700 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                                </svg>
+                                सदस्य जोड़ें
+                            </button>
+                        </div>
+
+                        <div id="familyMembersContainer">
+                            <!-- Family member template will be added here -->
+                        </div>
+                    </div>
+
+                    <!-- Bank Account Details -->
+                    <div class="bg-warning-50 p-4 rounded mb-6">
+                        <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                            बैंक खाता विवरण (Bank Account Details)
+                        </h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    खाता संख्या <span class="text-error">*</span>
+                                </label>
+                                <input type="text" id="accountNumber" name="accountNumber" placeholder="1234567890123456" class="form-input" required />
+                            </div>
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    IFSC कोड <span class="text-error">*</span>
+                                </label>
+                                <input type="text" id="ifscCode" name="ifscCode" placeholder="SBIN0001234" class="form-input" pattern="[A-Z]{4}0[A-Z0-9]{6}" required />
+                            </div>
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    बैंक का नाम <span class="text-error">*</span>
+                                </label>
+                                <input type="text" id="bankName" name="bankName" placeholder="स्टेट बैंक ऑफ इंडिया" class="form-input" required />
+                            </div>
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    शाखा का नाम <span class="text-error">*</span>
+                                </label>
+                                <input type="text" id="branchName" name="branchName" placeholder="मुख्य शाखा" class="form-input" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="step2Previous" class="bg-border hover:bg-border-light text-text-primary px-6 py-3 rounded font-inter-semibold transition-all duration-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            पिछला
+                        </button>
+                        <button type="button" id="step2Next" class="btn-primary flex items-center gap-2">
+                            आगे बढ़ें
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 3: Work Preferences -->
+                <section id="step3" class="card p-6 hidden">
+                    <h3 class="font-noto-devanagari font-noto-semibold text-xl text-primary mb-6 flex items-center gap-2">
+                        <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
+                        कार्य प्राथमिकता (Work Preferences)
+                    </h3>
+
+                    <!-- Work Type Selection -->
+                    <div class="mb-6">
+                        <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                            कार्य का प्रकार चुनें (Select Work Type)
+                        </h4>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <!-- Road Construction -->
+                            <div class="work-type-card border-2 border-border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-primary" data-work-type="road-construction">
+                                <div class="text-center">
+                                    <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <img src="https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Road Construction" class="w-8 h-8 rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                                        सड़क निर्माण
+                                    </h5>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        Road Construction
+                                    </p>
+                                </div>
+                                <input type="checkbox" name="workTypes" value="road-construction" class="hidden" />
+                            </div>
+
+                            <!-- Water Conservation -->
+                            <div class="work-type-card border-2 border-border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-primary" data-work-type="water-conservation">
+                                <div class="text-center">
+                                    <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <img src="https://images.pixabay.com/photo/2016/11/29/05/45/water-1867968_150.jpg" alt="Water Conservation" class="w-8 h-8 rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                                        जल संरक्षण
+                                    </h5>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        Water Conservation
+                                    </p>
+                                </div>
+                                <input type="checkbox" name="workTypes" value="water-conservation" class="hidden" />
+                            </div>
+
+                            <!-- Plantation -->
+                            <div class="work-type-card border-2 border-border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-primary" data-work-type="plantation">
+                                <div class="text-center">
+                                    <div class="bg-success-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=64&h=64&q=80" alt="Plantation" class="w-8 h-8 rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                                        वृक्षारोपण
+                                    </h5>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        Plantation
+                                    </p>
+                                </div>
+                                <input type="checkbox" name="workTypes" value="plantation" class="hidden" />
+                            </div>
+
+                            <!-- Building Construction -->
+                            <div class="work-type-card border-2 border-border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-primary" data-work-type="building-construction">
+                                <div class="text-center">
+                                    <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Building Construction" class="w-8 h-8 rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                                        भवन निर्माण
+                                    </h5>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        Building Construction
+                                    </p>
+                                </div>
+                                <input type="checkbox" name="workTypes" value="building-construction" class="hidden" />
+                            </div>
+
+                            <!-- Agriculture -->
+                            <div class="work-type-card border-2 border-border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-primary" data-work-type="agriculture">
+                                <div class="text-center">
+                                    <div class="bg-warning-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <img src="https://images.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_150.jpg" alt="Agriculture" class="w-8 h-8 rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                                        कृषि कार्य
+                                    </h5>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        Agriculture Work
+                                    </p>
+                                </div>
+                                <input type="checkbox" name="workTypes" value="agriculture" class="hidden" />
+                            </div>
+
+                            <!-- Cleaning -->
+                            <div class="work-type-card border-2 border-border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-primary" data-work-type="cleaning">
+                                <div class="text-center">
+                                    <div class="bg-error-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <img src="https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Cleaning" class="w-8 h-8 rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    </div>
+                                    <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                                        सफाई कार्य
+                                    </h5>
+                                    <p class="font-inter text-sm text-text-secondary">
+                                        Cleaning Work
+                                    </p>
+                                </div>
+                                <input type="checkbox" name="workTypes" value="cleaning" class="hidden" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferred Work Dates -->
+                    <div class="mb-6">
+                        <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                            पसंदीदा कार्य तिथि (Preferred Work Dates)
+                        </h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    प्रारंभ तिथि (Start Date) <span class="text-error">*</span>
+                                </label>
+                                <input type="date" id="preferredStartDate" name="preferredStartDate" class="form-input" min="2025-07-30" required />
+                            </div>
+                            <div>
+                                <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                                    समाप्ति तिथि (End Date) <span class="text-error">*</span>
+                                </label>
+                                <input type="date" id="preferredEndDate" name="preferredEndDate" class="form-input" min="2025-07-30" required />
+                            </div>
+                        </div>
+                        <p class="text-text-secondary text-sm mt-2 font-inter">
+                            अधिकतम 100 दिन का काम प्रति वर्ष मिलेगा
+                        </p>
+                    </div>
+
+                    <!-- Work Location Preference -->
+                    <div class="mb-6">
+                        <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-4">
+                            कार्य स्थान की प्राथमिकता (Work Location Preference)
+                        </h4>
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="radio" name="workLocation" value="within-village" class="w-4 h-4 text-primary" required />
+                                <span class="font-noto-devanagari">गांव के अंदर (Within Village)</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="radio" name="workLocation" value="within-5km" class="w-4 h-4 text-primary" required />
+                                <span class="font-noto-devanagari">5 किमी के अंदर (Within 5 km)</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="radio" name="workLocation" value="anywhere-in-block" class="w-4 h-4 text-primary" required />
+                                <span class="font-noto-devanagari">ब्लॉक में कहीं भी (Anywhere in Block)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="step3Previous" class="bg-border hover:bg-border-light text-text-primary px-6 py-3 rounded font-inter-semibold transition-all duration-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            पिछला
+                        </button>
+                        <button type="button" id="step3Next" class="btn-primary flex items-center gap-2">
+                            आगे बढ़ें
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 4: Document Upload -->
+                <section id="step4" class="card p-6 hidden">
+                    <h3 class="font-noto-devanagari font-noto-semibold text-xl text-primary mb-6 flex items-center gap-2">
+                        <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">4</span>
+                        दस्तावेज़ अपलोड (Document Upload)
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Aadhaar Card -->
+                        <div class="document-upload-section">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                आधार कार्ड (Aadhaar Card) <span class="text-error">*</span>
+                            </h4>
+                            <div class="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-all duration-300" id="aadhaarUpload">
+                                <div class="mb-4">
+                                    <svg class="w-12 h-12 text-text-secondary mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <p class="font-noto-devanagari text-text-secondary">
+                                        आधार कार्ड की फोटो अपलोड करें
+                                    </p>
+                                    <p class="font-inter text-sm text-text-secondary mt-1">
+                                        JPG, PNG (Max 2MB)
+                                    </p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                                    <button type="button" class="bg-primary hover:bg-primary-700 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        फाइल चुनें
+                                    </button>
+                                    <button type="button" class="bg-secondary hover:bg-secondary-600 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        कैमरा खोलें
+                                    </button>
+                                </div>
+                                <input type="file" name="aadhaarCard" accept="image/*" class="hidden" required />
+                            </div>
+                        </div>
+
+                        <!-- BPL Card -->
+                        <div class="document-upload-section">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                BPL कार्ड (BPL Card) <span class="text-error">*</span>
+                            </h4>
+                            <div class="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-all duration-300" id="bplUpload">
+                                <div class="mb-4">
+                                    <svg class="w-12 h-12 text-text-secondary mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <p class="font-noto-devanagari text-text-secondary">
+                                        BPL कार्ड की स्पष्ट फोटो अपलोड करें
+                                    </p>
+                                    <p class="font-inter text-sm text-text-secondary mt-1">
+                                        JPG, PNG (Max 2MB)
+                                    </p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                                    <button type="button" class="bg-primary hover:bg-primary-700 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        फाइल चुनें
+                                    </button>
+                                    <button type="button" class="bg-secondary hover:bg-secondary-600 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        कैमरा खोलें
+                                    </button>
+                                </div>
+                                <input type="file" name="bplCard" accept="image/*" class="hidden" required />
+                            </div>
+                        </div>
+
+                        <!-- Bank Passbook -->
+                        <div class="document-upload-section">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                बैंक पासबुक (Bank Passbook) <span class="text-error">*</span>
+                            </h4>
+                            <div class="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-all duration-300" id="passbookUpload">
+                                <div class="mb-4">
+                                    <svg class="w-12 h-12 text-text-secondary mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <p class="font-noto-devanagari text-text-secondary">
+                                        बैंक पासबुक के पहले पन्ने की फोटो
+                                    </p>
+                                    <p class="font-inter text-sm text-text-secondary mt-1">
+                                        JPG, PNG (Max 2MB)
+                                    </p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                                    <button type="button" class="bg-primary hover:bg-primary-700 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        फाइल चुनें
+                                    </button>
+                                    <button type="button" class="bg-secondary hover:bg-secondary-600 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        कैमरा खोलें
+                                    </button>
+                                </div>
+                                <input type="file" name="bankPassbook" accept="image/*" class="hidden" required />
+                            </div>
+                        </div>
+
+                        <!-- Passport Photo -->
+                        <div class="document-upload-section">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                पासपोर्ट साइज़ फोटो (Passport Size Photo) <span class="text-error">*</span>
+                            </h4>
+                            <div class="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-all duration-300" id="photoUpload">
+                                <div class="mb-4">
+                                    <svg class="w-12 h-12 text-text-secondary mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <p class="font-noto-devanagari text-text-secondary">
+                                        हाल की पासपोर्ट साइज़ फोटो अपलोड करें
+                                    </p>
+                                    <p class="font-inter text-sm text-text-secondary mt-1">
+                                        JPG, PNG (Max 1MB)
+                                    </p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                                    <button type="button" class="bg-primary hover:bg-primary-700 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        फाइल चुनें
+                                    </button>
+                                    <button type="button" class="bg-secondary hover:bg-secondary-600 text-white px-4 py-2 rounded font-inter-medium text-sm transition-all duration-300">
+                                        कैमरा खोलें
+                                    </button>
+                                </div>
+                                <input type="file" name="passportPhoto" accept="image/*" class="hidden" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upload Tips -->
+                    <div class="bg-accent-50 p-4 rounded mt-6">
+                        <h5 class="font-noto-devanagari font-noto-semibold text-primary mb-2">
+                            अपलोड करने के लिए सुझाव:
+                        </h5>
+                        <ul class="font-inter text-sm text-text-secondary space-y-1">
+                            <li>• दस्तावेज़ों की स्पष्ट और साफ फोटो लें</li>
+                            <li>• अच्छी रोशनी में फोटो खींचें</li>
+                            <li>• फाइल का साइज़ 2MB से कम रखें</li>
+                            <li>• सभी टेक्स्ट स्पष्ट रूप से दिखाई देना चाहिए</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="step4Previous" class="bg-border hover:bg-border-light text-text-primary px-6 py-3 rounded font-inter-semibold transition-all duration-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            पिछला
+                        </button>
+                        <button type="button" id="step4Next" class="btn-primary flex items-center gap-2">
+                            आगे बढ़ें
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 5: Review and Submit -->
+                <section id="step5" class="card p-6 hidden">
+                    <h3 class="font-noto-devanagari font-noto-semibold text-xl text-primary mb-6 flex items-center gap-2">
+                        <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">5</span>
+                        समीक्षा और सबमिट (Review and Submit)
+                    </h3>
+
+                    <!-- Review Summary -->
+                    <div class="space-y-6">
+                        <!-- Personal Details Summary -->
+                        <div class="bg-primary-50 p-4 rounded">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                व्यक्तिगत विवरण
+                            </h4>
+                            <div id="personalDetailsSummary" class="grid md:grid-cols-2 gap-4 font-inter text-sm">
+                                <!-- Summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Family Information Summary -->
+                        <div class="bg-accent-50 p-4 rounded">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                पारिवारिक जानकारी
+                            </h4>
+                            <div id="familyInfoSummary" class="font-inter text-sm">
+                                <!-- Summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Work Preferences Summary -->
+                        <div class="bg-secondary-50 p-4 rounded">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                कार्य प्राथमिकता
+                            </h4>
+                            <div id="workPreferencesSummary" class="font-inter text-sm">
+                                <!-- Summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Documents Summary -->
+                        <div class="bg-warning-50 p-4 rounded">
+                            <h4 class="font-noto-devanagari font-noto-semibold text-lg text-primary mb-3">
+                                अपलोड किए गए दस्तावेज़
+                            </h4>
+                            <div id="documentsSummary" class="font-inter text-sm">
+                                <!-- Summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Declaration -->
+                    <div class="bg-surface border border-border p-4 rounded mt-6">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="declaration" name="declaration" class="w-4 h-4 text-primary mt-1" required />
+                            <label for="declaration" class="font-inter text-sm text-text-primary cursor-pointer">
+                                <span class="font-noto-devanagari font-noto-semibold">घोषणा:</span> मैं घोषणा करता/करती हूं कि मेरे द्वारा दी गई सभी जानकारी सत्य और सही है। यदि कोई जानकारी गलत पाई जाती है तो मैं इसके लिए जिम्मेदार हूं। मैं MGNREGS की नियम और शर्तों से सहमत हूं।
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="step5Previous" class="bg-border hover:bg-border-light text-text-primary px-6 py-3 rounded font-inter-semibold transition-all duration-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            पिछला
+                        </button>
+                        <button type="submit" id="submitApplication" class="bg-success hover:bg-success-700 text-white px-8 py-3 rounded font-inter-semibold transition-all duration-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            आवेदन सबमिट करें
+                        </button>
+                    </div>
+                </section>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-surface rounded-lg p-6 max-w-md w-full">
+            <div class="text-center">
+                <div class="bg-success-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="font-noto-devanagari font-noto-bold text-xl text-primary mb-2">
+                    आवेदन सफलतापूर्वक सबमिट हुआ!
+                </h3>
+                <p class="font-inter text-text-secondary mb-4">
+                    आपका आवेदन संख्या: <span class="font-inter-semibold text-primary" id="applicationNumber">MGNREGS/2025/123456</span>
+                </p>
+                <p class="font-inter text-sm text-text-secondary mb-6">
+                    आपको SMS और ईमेल के द्वारा अपडेट मिलते रहेंगे। आवेदन की स्थिति जांचने के लिए लॉगिन करें।
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="downloadReceipt" class="btn-primary flex-1">
+                        रसीद डाउनलोड करें
+                    </button>
+                    <a href="secure_login_portal.html" class="btn-secondary flex-1 text-center">
+                        स्थिति जांचें
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        संपर्क जानकारी
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <p>हेल्पलाइन: 1800-345-2244</p>
+                        <p>ईमेल: help@mgnregs.gov.in</p>
+                        <p>समय: सुबह 9 बजे से शाम 6 बजे तक</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        महत्वपूर्ण लिंक
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <a href="work_demand_application_center.html" class="block hover:text-secondary transition-colors duration-300">
+                            आवेदन करें
+                        </a>
+                        <a href="secure_login_portal.html" class="block hover:text-secondary transition-colors duration-300">
+                            स्थिति जांचें
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            योजना की जानकारी
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        राज्य पोर्टल
+                    </h4>
+                    <div class="space-y-2 font-inter text-sm">
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            उत्तर प्रदेश
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            राजस्थान
+                        </a>
+                        <a href="javascript:void(0)" class="block hover:text-secondary transition-colors duration-300">
+                            मध्य प्रदेश
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-noto-devanagari font-noto-semibold text-lg mb-4">
+                        सामाजिक मीडिया
+                    </h4>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)" class="hover:text-secondary transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="hover:text-secondary transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-primary-800 mt-8 pt-6 text-center">
+                <p class="font-inter text-sm opacity-80">
+                    © 2025 भारत सरकार। सभी अधिकार सुरक्षित। | Government of India. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Multi-step form functionality
+        let currentStep = 1;
+        const totalSteps = 5;
+        let formData = {};
+
+        // Language Toggle Functionality
+        const hindiBtn = document.getElementById('hindiBtn');
+        const englishBtn = document.getElementById('englishBtn');
+
+        hindiBtn.addEventListener('click', function() {
+            hindiBtn.classList.add('bg-primary', 'text-white');
+            hindiBtn.classList.remove('text-primary');
+            englishBtn.classList.remove('bg-primary', 'text-white');
+            englishBtn.classList.add('text-primary');
+        });
+
+        englishBtn.addEventListener('click', function() {
+            englishBtn.classList.add('bg-primary', 'text-white');
+            englishBtn.classList.remove('text-primary');
+            hindiBtn.classList.remove('bg-primary', 'text-white');
+            hindiBtn.classList.add('text-primary');
+        });
+
+        // Auto-save functionality
+        function showAutoSaveIndicator() {
+            const indicator = document.getElementById('autoSaveIndicator');
+            indicator.classList.remove('opacity-0', 'translate-x-full');
+            indicator.classList.add('opacity-100', 'translate-x-0');
+            
+            setTimeout(() => {
+                indicator.classList.add('opacity-0', 'translate-x-full');
+                indicator.classList.remove('opacity-100', 'translate-x-0');
+            }, 2000);
+        }
+
+        // Save form data to localStorage
+        function saveFormData() {
+            const form = document.getElementById('workDemandForm');
+            const formData = new FormData(form);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            localStorage.setItem('mgnregsFormData', JSON.stringify(data));
+            showAutoSaveIndicator();
+        }
+
+        // Load saved form data
+        function loadFormData() {
+            const savedData = localStorage.getItem('mgnregsFormData');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                Object.keys(data).forEach(key => {
+                    const element = document.querySelector(`[name="${key}"]`);
+                    if (element) {
+                        element.value = data[key];
+                    }
+                });
+            }
+        }
+
+        // Step navigation functions
+        function showStep(stepNumber) {
+            // Hide all steps
+            for (let i = 1; i <= totalSteps; i++) {
+                document.getElementById(`step${i}`).classList.add('hidden');
+            }
+            
+            // Show current step
+            document.getElementById(`step${stepNumber}`).classList.remove('hidden');
+            
+            // Update progress indicators
+            updateProgressIndicators(stepNumber);
+            
+            currentStep = stepNumber;
+        }
+
+        function updateProgressIndicators(stepNumber) {
+            for (let i = 1; i <= totalSteps; i++) {
+                const indicator = document.getElementById(`step${i}-indicator`);
+                const progress = document.getElementById(`progress${i}`);
+                
+                if (i < stepNumber) {
+                    // Completed steps
+                    indicator.classList.remove('bg-border', 'text-text-secondary');
+                    indicator.classList.add('bg-success', 'text-white');
+                    if (progress) progress.style.width = '100%';
+                } else if (i === stepNumber) {
+                    // Current step
+                    indicator.classList.remove('bg-border', 'text-text-secondary', 'bg-success');
+                    indicator.classList.add('bg-primary', 'text-white');
+                    if (progress) progress.style.width = '0%';
+                } else {
+                    // Future steps
+                    indicator.classList.remove('bg-primary', 'text-white', 'bg-success');
+                    indicator.classList.add('bg-border', 'text-text-secondary');
+                    if (progress) progress.style.width = '0%';
+                }
+            }
+        }
+
+        // Form validation functions
+        function validateStep1() {
+            const requiredFields = ['aadhaarNumber', 'mobileNumber', 'fullName', 'fatherName', 'dateOfBirth', 'gender', 'state', 'district', 'village', 'pinCode'];
+            return validateRequiredFields(requiredFields);
+        }
+
+        function validateStep2() {
+            const requiredFields = ['bplCardNumber', 'headOfFamily', 'accountNumber', 'ifscCode', 'bankName', 'branchName'];
+            return validateRequiredFields(requiredFields);
+        }
+
+        function validateStep3() {
+            const workTypesSelected = document.querySelectorAll('input[name="workTypes"]:checked').length > 0;
+            const workLocationSelected = document.querySelector('input[name="workLocation"]:checked');
+            const startDate = document.getElementById('preferredStartDate').value;
+            const endDate = document.getElementById('preferredEndDate').value;
+            
+            if (!workTypesSelected) {
+                alert('कृपया कम से कम एक कार्य प्रकार चुनें।');
+                return false;
+            }
+            
+            if (!workLocationSelected) {
+                alert('कृपया कार्य स्थान की प्राथमिकता चुनें।');
+                return false;
+            }
+            
+            if (!startDate || !endDate) {
+                alert('कृपया पसंदीदा कार्य तिथि चुनें।');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function validateStep4() {
+            const requiredFiles = ['aadhaarCard', 'bplCard', 'bankPassbook', 'passportPhoto'];
+            for (let fileName of requiredFiles) {
+                const fileInput = document.querySelector(`input[name="${fileName}"]`);
+                if (!fileInput.files.length) {
+                    alert('कृपया सभी आवश्यक दस्तावेज़ अपलोड करें।');
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function validateRequiredFields(fieldNames) {
+            for (let fieldName of fieldNames) {
+                const field = document.getElementById(fieldName) || document.querySelector(`[name="${fieldName}"]`);
+                if (!field || !field.value.trim()) {
+                    alert('कृपया सभी आवश्यक फील्ड भरें।');
+                    field?.focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Step navigation event listeners
+        document.getElementById('step1Next').addEventListener('click', function() {
+            if (validateStep1()) {
+                saveFormData();
+                showStep(2);
+            }
+        });
+
+        document.getElementById('step2Previous').addEventListener('click', function() {
+            showStep(1);
+        });
+
+        document.getElementById('step2Next').addEventListener('click', function() {
+            if (validateStep2()) {
+                saveFormData();
+                showStep(3);
+            }
+        });
+
+        document.getElementById('step3Previous').addEventListener('click', function() {
+            showStep(2);
+        });
+
+        document.getElementById('step3Next').addEventListener('click', function() {
+            if (validateStep3()) {
+                saveFormData();
+                showStep(4);
+            }
+        });
+
+        document.getElementById('step4Previous').addEventListener('click', function() {
+            showStep(3);
+        });
+
+        document.getElementById('step4Next').addEventListener('click', function() {
+            if (validateStep4()) {
+                saveFormData();
+                populateReviewSummary();
+                showStep(5);
+            }
+        });
+
+        document.getElementById('step5Previous').addEventListener('click', function() {
+            showStep(4);
+        });
+
+        // Work type selection functionality
+        document.querySelectorAll('.work-type-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const checkbox = this.querySelector('input[type="checkbox"]');
+                const isSelected = this.classList.contains('border-primary');
+                
+                if (isSelected) {
+                    this.classList.remove('border-primary', 'bg-primary-50');
+                    this.classList.add('border-border');
+                    checkbox.checked = false;
+                } else {
+                    this.classList.add('border-primary', 'bg-primary-50');
+                    this.classList.remove('border-border');
+                    checkbox.checked = true;
+                }
+            });
+        });
+
+        // Family member management
+        let familyMemberCount = 0;
+
+        document.getElementById('addFamilyMember').addEventListener('click', function() {
+            familyMemberCount++;
+            const container = document.getElementById('familyMembersContainer');
+            
+            const memberDiv = document.createElement('div');
+            memberDiv.className = 'bg-surface border border-border rounded p-4 mb-4';
+            memberDiv.innerHTML = `
+                <div class="flex justify-between items-center mb-3">
+                    <h5 class="font-noto-devanagari font-noto-semibold text-primary">
+                        सदस्य ${familyMemberCount}
+                    </h5>
+                    <button type="button" class="text-error hover:text-error-600 transition-colors duration-300" onclick="removeFamilyMember(this)">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                            नाम <span class="text-error">*</span>
+                        </label>
+                        <input type="text" name="familyMember${familyMemberCount}Name" class="form-input" required>
+                    </div>
+                    <div>
+                        <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                            रिश्ता <span class="text-error">*</span>
+                        </label>
+                        <select name="familyMember${familyMemberCount}Relation" class="form-input" required>
+                            <option value="">चुनें</option>
+                            <option value="spouse">पति/पत्नी</option>
+                            <option value="son">बेटा</option>
+                            <option value="daughter">बेटी</option>
+                            <option value="father">पिता</option>
+                            <option value="mother">माता</option>
+                            <option value="brother">भाई</option>
+                            <option value="sister">बहन</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-noto-devanagari font-noto-medium text-primary mb-2">
+                            उम्र <span class="text-error">*</span>
+                        </label>
+                        <input type="number" name="familyMember${familyMemberCount}Age" min="18" max="60" class="form-input" required>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(memberDiv);
+        });
+
+        function removeFamilyMember(button) {
+            button.closest('.bg-surface').remove();
+        }
+
+        // State-District-Block cascade
+        const stateDistrictData = {
+            'uttar-pradesh': ['लखनऊ', 'कानपुर', 'आगरा', 'वाराणसी', 'मेरठ'],
+            'rajasthan': ['जयपुर', 'जोधपुर', 'उदयपुर', 'कोटा', 'अजमेर'],
+            'madhya-pradesh': ['भोपाल', 'इंदौर', 'जबलपुर', 'ग्वालियर', 'उज्जैन'],
+            'bihar': ['पटना', 'गया', 'भागलपुर', 'मुजफ्फरपुर', 'दरभंगा'],
+            'west-bengal': ['कोलकाता', 'हावड़ा', 'दार्जिलिंग', 'मालदा', 'मुर्शिदाबाद'],
+            'odisha': ['भुवनेश्वर', 'कटक', 'राउरकेला', 'ब्रह्मपुर', 'संबलपुर'],
+            'jharkhand': ['रांची', 'जमशेदपुर', 'धनबाद', 'बोकारो', 'देवघर'],
+            'chhattisgarh': ['रायपुर', 'भिलाई', 'बिलासपुर', 'कोरबा', 'दुर्ग']
+        };
+
+        const districtBlockData = {
+            'लखनऊ': ['सदर', 'मोहनलालगंज', 'मल्लीहाबाद', 'बकशी का तालाब'],
+            'जयपुर': ['आमेर', 'चाकसू', 'फागी', 'कोटपूतली'],
+            'भोपाल': ['हुजूर', 'फंदा', 'बेरसिया', 'राजगढ़']
+        };
+
+        document.getElementById('state').addEventListener('change', function() {
+            const selectedState = this.value;
+            const districtSelect = document.getElementById('district');
+            const blockSelect = document.getElementById('block');
+            
+            // Clear and populate districts
+            districtSelect.innerHTML = '<option value="">जिला चुनें</option>';
+            blockSelect.innerHTML = '<option value="">पहले जिला चुनें</option>';
+            
+            if (selectedState && stateDistrictData[selectedState]) {
+                stateDistrictData[selectedState].forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+                districtSelect.disabled = false;
+            } else {
+                districtSelect.disabled = true;
+                blockSelect.disabled = true;
+            }
+        });
+
+        document.getElementById('district').addEventListener('change', function() {
+            const selectedDistrict = this.value;
+            const blockSelect = document.getElementById('block');
+            
+            // Clear and populate blocks
+            blockSelect.innerHTML = '<option value="">ब्लॉक चुनें</option>';
+            
+            if (selectedDistrict && districtBlockData[selectedDistrict]) {
+                districtBlockData[selectedDistrict].forEach(block => {
+                    const option = document.createElement('option');
+                    option.value = block;
+                    option.textContent = block;
+                    blockSelect.appendChild(option);
+                });
+                blockSelect.disabled = false;
+            } else {
+                // Default blocks if not in data
+                ['ब्लॉक 1', 'ब्लॉक 2', 'ब्लॉक 3'].forEach(block => {
+                    const option = document.createElement('option');
+                    option.value = block;
+                    option.textContent = block;
+                    blockSelect.appendChild(option);
+                });
+                blockSelect.disabled = false;
+            }
+        });
+
+        // Document upload functionality
+        function setupDocumentUpload(uploadId, inputName) {
+            const uploadArea = document.getElementById(uploadId);
+            const fileInput = uploadArea.querySelector('input[type="file"]');
+            const buttons = uploadArea.querySelectorAll('button');
+            
+            buttons[0].addEventListener('click', () => fileInput.click());
+            buttons[1].addEventListener('click', () => {
+                // Camera functionality would be implemented here
+                alert('कैमरा फीचर जल्द ही उपलब्ध होगा।');
+            });
+            
+            fileInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    // Validate file size
+                    const maxSize = inputName === 'passportPhoto' ? 1 * 1024 * 1024 : 2 * 1024 * 1024; // 1MB for photo, 2MB for others
+                    if (file.size > maxSize) {
+                        alert('फाइल का साइज़ बहुत बड़ा है। कृपया छोटी फाइल चुनें।');
+                        return;
+                    }
+                    
+                    // Update UI to show file selected
+                    uploadArea.classList.add('border-success', 'bg-success-50');
+                    uploadArea.classList.remove('border-border');
+                    
+                    const fileName = uploadArea.querySelector('p');
+                    fileName.textContent = `फाइल चुनी गई: ${file.name}`;
+                    fileName.classList.add('text-success');
+                }
+            });
+        }
+
+        // Setup all document uploads
+        setupDocumentUpload('aadhaarUpload', 'aadhaarCard');
+        setupDocumentUpload('bplUpload', 'bplCard');
+        setupDocumentUpload('passbookUpload', 'bankPassbook');
+        setupDocumentUpload('photoUpload', 'passportPhoto');
+
+        // Populate review summary
+        function populateReviewSummary() {
+            // Personal Details Summary
+            const personalSummary = document.getElementById('personalDetailsSummary');
+            personalSummary.innerHTML = `
+                <div><strong>नाम:</strong> ${document.getElementById('fullName').value}</div>
+                <div><strong>आधार:</strong> ${document.getElementById('aadhaarNumber').value}</div>
+                <div><strong>मोबाइल:</strong> ${document.getElementById('mobileNumber').value}</div>
+                <div><strong>पिता का नाम:</strong> ${document.getElementById('fatherName').value}</div>
+                <div><strong>राज्य:</strong> ${document.getElementById('state').selectedOptions[0].text}</div>
+                <div><strong>जिला:</strong> ${document.getElementById('district').value}</div>
+            `;
+            
+            // Family Info Summary
+            const familySummary = document.getElementById('familyInfoSummary');
+            familySummary.innerHTML = `
+                <div><strong>BPL कार्ड:</strong> ${document.getElementById('bplCardNumber').value}</div>
+                <div><strong>परिवार के मुखिया:</strong> ${document.getElementById('headOfFamily').value}</div>
+                <div><strong>बैंक खाता:</strong> ${document.getElementById('accountNumber').value}</div>
+                <div><strong>IFSC:</strong> ${document.getElementById('ifscCode').value}</div>
+            `;
+            
+            // Work Preferences Summary
+            const selectedWorkTypes = Array.from(document.querySelectorAll('input[name="workTypes"]:checked'))
+                .map(input => input.value).join(', ');
+            const workLocation = document.querySelector('input[name="workLocation"]:checked')?.nextElementSibling.textContent;
+            
+            const workSummary = document.getElementById('workPreferencesSummary');
+            workSummary.innerHTML = `
+                <div><strong>कार्य प्रकार:</strong> ${selectedWorkTypes}</div>
+                <div><strong>कार्य स्थान:</strong> ${workLocation}</div>
+                <div><strong>प्रारंभ तिथि:</strong> ${document.getElementById('preferredStartDate').value}</div>
+                <div><strong>समाप्ति तिथि:</strong> ${document.getElementById('preferredEndDate').value}</div>
+            `;
+            
+            // Documents Summary
+            const docSummary = document.getElementById('documentsSummary');
+            const uploadedDocs = [];
+            ['aadhaarCard', 'bplCard', 'bankPassbook', 'passportPhoto'].forEach(docName => {
+                const input = document.querySelector(`input[name="${docName}"]`);
+                if (input.files.length > 0) {
+                    uploadedDocs.push(`✓ ${input.files[0].name}`);
+                }
+            });
+            docSummary.innerHTML = uploadedDocs.join('<br>');
+        }
+
+        // Form submission
+        document.getElementById('workDemandForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!document.getElementById('declaration').checked) {
+                alert('कृपया घोषणा को स्वीकार करें।');
+                return;
+            }
+            
+            // Generate application number
+            const applicationNumber = 'MGNREGS/2025/' + Math.floor(Math.random() * 1000000);
+            document.getElementById('applicationNumber').textContent = applicationNumber;
+            
+            // Clear saved form data
+            localStorage.removeItem('mgnregsFormData');
+            
+            // Show success modal
+            document.getElementById('successModal').classList.remove('hidden');
+        });
+
+        // Download receipt functionality
+        document.getElementById('downloadReceipt').addEventListener('click', function() {
+            // In a real application, this would generate and download a PDF receipt
+            alert('रसीद डाउनलोड हो रही है...');
+        });
+
+        // Auto-save on input change
+        document.getElementById('workDemandForm').addEventListener('input', function() {
+            clearTimeout(window.autoSaveTimeout);
+            window.autoSaveTimeout = setTimeout(saveFormData, 1000);
+        });
+
+        // Initialize form
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFormData();
+            showStep(1);
+        });
+
+        // Aadhaar number formatting
+        document.getElementById('aadhaarNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '').replace(/\D/g, '');
+            let formattedValue = value.replace(/(\d{4})(\d{4})(\d{4})/, '$1 $2 $3');
+            if (value.length <= 12) {
+                e.target.value = formattedValue;
+            }
+        });
+
+        // Mobile number validation
+        document.getElementById('mobileNumber').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+        });
+
+        // Pin code validation
+        document.getElementById('pinCode').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '').slice(0, 6);
+        });
+
+        // Date validation for preferred work dates
+        document.getElementById('preferredStartDate').addEventListener('change', function() {
+            const startDate = new Date(this.value);
+            const endDateInput = document.getElementById('preferredEndDate');
+            
+            // Set minimum end date to start date
+            endDateInput.min = this.value;
+            
+            // Calculate maximum end date (100 days from start)
+            const maxEndDate = new Date(startDate);
+            maxEndDate.setDate(maxEndDate.getDate() + 100);
+            endDateInput.max = maxEndDate.toISOString().split('T')[0];
+        });
+    </script>
+</body>
+</html>
