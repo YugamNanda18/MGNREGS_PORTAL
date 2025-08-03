@@ -56,7 +56,9 @@ Internet connection (for CDN resources: Bootstrap, Tailwind CSS, Font Awesome, G
 Basic understanding of web technologies (optional, for modifications)
 
 
+
 🔗 Live Demo
+https://yugamnanda18.github.io/MGNREGS_PORTAL/
 
 
 ⭐ Star this repository if you found it helpful!
